@@ -10,7 +10,7 @@
     <!--bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
-    <title>Title</title>
+    <title>Js Website</title>
 
 
 
@@ -23,16 +23,34 @@
     <script>
         function hello()
         {
-            console.log("Hello, world");
+           let heading = prompt("Change the heading");
+       
+            document.getElementById('heading').innerHTML = heading
+
+        }
+        function bye()
+        {
+            var erm = document.getElementById('erm').style.fontSize='35px';
+        }
+        function gone()
+        {
+            var alone = document.getElementById('alone').style.display='none'
+        }
+        function suprise()
+        {
+            var hi = document.getElementById('hi').style.display='block'
         }
     </script>
 </head>
 <body>
-    <h1 id=heading style="background-color:blue">This is a heading</h1>
-    <p>This is a paragraph. </p>
-    <p>Click <a href="https://www.youtube.com/watch?v=EiXQmeuHTOY">here</a> to listen to englighment.</p>
-    <button type="button" class="btn btn-primary">This is a bootstrap button</button>
-    <a href="https://getbootstrap.com/" class="btn btn-primary">This is a link that looks like a button.</a>
+    <h1 id=heading style="background-color:blue">Js Website</h1><button type="button" class="btn btn-primary" onclick="hello();">Change Heading</button>
+   
+    <p id="erm">This is a paragraph.</p>
+    <button onclick="bye()" type="button" class="btn btn-primary">Change the size</button>
+    <p id="alone"> This is another intresting paragraph</p>
+    <button onclick="gone()" type="button" class="btn btn-primary">Remove this intresting paragraph</button>
+    <p id="hi" style="display:none"> SUPRISEEEEE</p>
+    <button onclick="suprise()" type="button" class="btn btn-primary">It will make something apear</button>
 
 </body>
 </html>
